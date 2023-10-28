@@ -5,23 +5,23 @@
 class Hckctl < Formula
   desc "The declarative HaCKing Tool"
   homepage "https://github.com/hckops/hckctl"
-  version "0.12.5"
+  version "0.12.6"
 
   depends_on "docker" => :optional
   depends_on "kubectl" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hckops/hckctl/releases/download/v0.12.5/hckctl-0.12.5-darwin-x86_64.tar.gz"
-      sha256 "aced99ed71acea9624f917eff5897f138e8609a1636ef4b87a499376fcf8e57b"
+      url "https://github.com/hckops/hckctl/releases/download/v0.12.6/hckctl-0.12.6-darwin-x86_64.tar.gz"
+      sha256 "de38eb6f0f6665ad7b9d58e42fb40464551d970ae0055c2877ca410210597f9d"
 
       def install
         bin.install "hckctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hckops/hckctl/releases/download/v0.12.5/hckctl-0.12.5-darwin-arm64.tar.gz"
-      sha256 "a9b1de188ab6dd8b2d4100a7f1651453591e5c1c217a3b05dd209ef7f8c92d73"
+      url "https://github.com/hckops/hckctl/releases/download/v0.12.6/hckctl-0.12.6-darwin-arm64.tar.gz"
+      sha256 "4ce3581caadbdeaea75685727d571a969784ca34788bb870f5817f0fc3b9ab20"
 
       def install
         bin.install "hckctl"
@@ -30,17 +30,17 @@ class Hckctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hckops/hckctl/releases/download/v0.12.5/hckctl-0.12.5-linux-x86_64.tar.gz"
-      sha256 "cdd0a8ac6f102341a65893f92ad308d230601213f70d37cc6556923ab054b4d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hckops/hckctl/releases/download/v0.12.6/hckctl-0.12.6-linux-arm64.tar.gz"
+      sha256 "24e6463cab6a15606b9daf9cb3f3d4a224a92c12ae25b165f234a9bbb079c3e7"
 
       def install
         bin.install "hckctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hckops/hckctl/releases/download/v0.12.5/hckctl-0.12.5-linux-arm64.tar.gz"
-      sha256 "545dd150b783d1e61557c801b92e331cf455801dc3d62803c42e4cc9384742df"
+    if Hardware::CPU.intel?
+      url "https://github.com/hckops/hckctl/releases/download/v0.12.6/hckctl-0.12.6-linux-x86_64.tar.gz"
+      sha256 "a5f621dc545f74b97b40e3cea2ecc5283abafce1f0d953162405511f94d18300"
 
       def install
         bin.install "hckctl"
