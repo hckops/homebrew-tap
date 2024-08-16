@@ -5,23 +5,23 @@
 class Hckctl < Formula
   desc "The declarative HaCKing Tool"
   homepage "https://github.com/hckops/hckctl"
-  version "0.13.0"
+  version "0.14.0"
 
   depends_on "docker" => :optional
   depends_on "kubectl" => :optional
 
   on_macos do
     on_intel do
-      url "https://github.com/hckops/hckctl/releases/download/v0.13.0/hckctl-0.13.0-darwin-x86_64.tar.gz"
-      sha256 "9be53896f295fb0448983159309c37ba8bd50bed963850f7a10251f8cb374e4f"
+      url "https://github.com/hckops/hckctl/releases/download/v0.14.0/hckctl-0.14.0-darwin-x86_64.tar.gz"
+      sha256 "e6c810ee35925af18faee428f17ccb615d2077ba5cfc4ead19c758f30dad13a9"
 
       def install
         bin.install "hckctl"
       end
     end
     on_arm do
-      url "https://github.com/hckops/hckctl/releases/download/v0.13.0/hckctl-0.13.0-darwin-arm64.tar.gz"
-      sha256 "83a1d2d0e513b69ad083194bd0f119c2e2d1a00c7943843e7903a76f2a8bd8b7"
+      url "https://github.com/hckops/hckctl/releases/download/v0.14.0/hckctl-0.14.0-darwin-arm64.tar.gz"
+      sha256 "7836377bb81e7230787347180532d9994b4fe8fcc3e8dabfa33ab1ccde4ec65c"
 
       def install
         bin.install "hckctl"
@@ -32,8 +32,8 @@ class Hckctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hckops/hckctl/releases/download/v0.13.0/hckctl-0.13.0-linux-x86_64.tar.gz"
-        sha256 "2d9fa58ab73ccbe0777dc1b2758b38a3ae8c32a62e510e2e4ff497d56bfdb02f"
+        url "https://github.com/hckops/hckctl/releases/download/v0.14.0/hckctl-0.14.0-linux-x86_64.tar.gz"
+        sha256 "7c7f0260a47b0ac45ff508085cc7dc939dcfa7d34afb30b12260c98eb1c19c11"
 
         def install
           bin.install "hckctl"
@@ -42,8 +42,8 @@ class Hckctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hckops/hckctl/releases/download/v0.13.0/hckctl-0.13.0-linux-arm64.tar.gz"
-        sha256 "1e6485213313784e829bb5133c82761b7b64a59107c33d9c1e11afbb551e2acd"
+        url "https://github.com/hckops/hckctl/releases/download/v0.14.0/hckctl-0.14.0-linux-arm64.tar.gz"
+        sha256 "b0de8fa7d7c5531288beaae6b5f28cbb7505ff22ad058605b74e644ff4d66418"
 
         def install
           bin.install "hckctl"
